@@ -1,0 +1,87 @@
+﻿<!-- 
+Formular, welches das Ausgefüllte einer Mail sendet.    
+Tareq Kattit, 3.5.2019
+-->
+<!DOCTYPE html>
+<html lang="de-ch">
+<head>
+    <meta charset="utf-8" />
+    <title>Formular</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: mediumslateblue;
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+    <form method="post" action="form-send.php">
+        <h1>Bestellung von Informationsmaterial</h1>
+        <p>
+            <label>
+                Nachname
+                <input type="text" name="nachname" />
+
+            </label>
+        </p>
+        <p>
+            <label>
+                Vorname
+                <input type="text" name="vorname" />
+
+            </label>
+        </p>
+        <p>
+            <label>
+                Email
+                <input type="text" name="email" placeholder="name@example.com"/>
+            </label>
+        </p>
+        <fieldset id="f">
+            <legend id="legend">Ich bestelle Informationen zu</legend>
+            <p>
+                <label>
+                    <input type="checkbox" name="mittel[]" value="PHP"/>
+                    PDF
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="mittel[]" value="JavaScript" />
+                    ePUB
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="checkbox" name="mittel[]" value="CSS" />
+                    CSS
+                </label>
+            </p>
+
+        </fieldset>
+        <fieldset id="f">
+            <legend id="legend">Ich abonniere den Newsletter</legend>
+            <p>
+                <label>
+                    <input type="radio" name="datei" value="ja" />
+                    Ja
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="datei" value="nein" />
+                    Nein
+                </label>
+            </p>
+
+        </fieldset>
+
+        <p>
+            <input type="submit" name="senden" value="Senden" />
+        </p>
+
+    </form>
+</body>
+</html>
